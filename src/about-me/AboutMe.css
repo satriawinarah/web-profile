@@ -1,0 +1,23 @@
+.text-about-me {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #2f3640;
+}
+
+.text-birth-email {
+    font-weight: bolder;
+    color: #2f3640;
+    text-align: right;
+}
+
+.info-detail-row {
+    padding-top: 20px;
+}
+
+.border {
+    border: none;
+}
+
+.padding-left-40 {
+    padding-left: 40px;
+}

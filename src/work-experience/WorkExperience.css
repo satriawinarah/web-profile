@@ -1,0 +1,15 @@
+.p-left-right-40 {
+    padding-left: 40px;
+    padding-right: 40px
+}
+
+.title {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.company-logo {
+    height: 100px;
+    width: 50px;
+    vertical-align: middle;
+}
