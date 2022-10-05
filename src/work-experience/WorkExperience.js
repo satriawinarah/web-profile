@@ -3,6 +3,7 @@ import "./WorkExperience.css"
 import GojekLogo from '../images/gojek-logo.jpeg'
 import AllianzLogo from '../images/allianz-logo.jpeg'
 import L7Logo from '../images/l7-logo.jpeg'
+import FIFLogo from '../images/fif-logo.jpeg'
 
 const WorkExperience = () => {
     const companies = [
@@ -29,6 +30,14 @@ const WorkExperience = () => {
             "logo": L7Logo,
             "highlight1": "Vendis App",
             "highlight2": "Vendis Dashboard"
+        },
+        {
+            "name": "FIF Group",
+            "period": "Feb 2016 - Dec 2017",
+            "job": "Java Web Programmer",
+            "logo": FIFLogo,
+            "highlight1": "ITMS (IT Management System)",
+            "highlight2": "Inhouse Project"
         }
     ];
     return (
@@ -44,7 +53,7 @@ const WorkExperience = () => {
                         <Col className={"mb-4"}>
                             <Card style={{ width: '18rem' }}>
                                 <Card.Body>
-                                    <Card.Img variant={"top"} src={company.logo} />
+                                    <Card.Img variant={"top"} src={company.logo} className={"mb-2"}/>
                                     <Card.Title>{company.name}</Card.Title>
                                     <Card.Subtitle className="mb-2 text-muted">{company.period}</Card.Subtitle>
                                     <Card.Subtitle className="mb-2 text-muted text-italic">{company.job}</Card.Subtitle>
