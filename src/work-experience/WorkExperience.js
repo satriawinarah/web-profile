@@ -1,4 +1,4 @@
-import {Row, Container, Col, Image, Card, Button} from "react-bootstrap";
+import {Row, Container, Col, Card} from "react-bootstrap";
 import "./WorkExperience.css"
 import GojekLogo from '../images/gojek-logo.jpeg'
 import AllianzLogo from '../images/allianz-logo.jpeg'
