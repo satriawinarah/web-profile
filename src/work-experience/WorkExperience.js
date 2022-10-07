@@ -53,7 +53,7 @@ const WorkExperience = () => {
                         <Col className={"mb-4"}>
                             <Card style={{ width: '18rem' }}>
                                 <Card.Body>
-                                    <Card.Img variant={"top"} src={company.logo} className={"mb-2"}/>
+                                    <Card.Img variant={"top"} src={company.logo} className={"mb-2 p-4"}/>
                                     <Card.Title>{company.name}</Card.Title>
                                     <Card.Subtitle className="mb-2 text-muted">{company.period}</Card.Subtitle>
                                     <Card.Subtitle className="mb-2 text-muted text-italic">{company.job}</Card.Subtitle>
