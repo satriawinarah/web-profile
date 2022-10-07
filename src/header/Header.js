@@ -8,7 +8,7 @@ const Header = () => (
         {/*header*/}
         <Row className="header">
             <Col sm={"3"}>
-               <Image fluid={true} roundedCircle={true} src={profileImage} className={"profile-image"}>
+               <Image roundedCircle={true} src={profileImage} className={"profile-image"}>
 
                </Image>
             </Col>
