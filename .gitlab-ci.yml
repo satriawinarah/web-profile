@@ -17,6 +17,11 @@
 publish:
   stage: deploy
   script:
-    - ssh root@satria.win -p 20212 "cd /home/web-profile && git checkout master && git pull origin master && npm run build && rm -rf /var/www/html/www.satria.win/* && cp -r build/* /var/www/html/www.satria.win/ && systemctl restart apache2 && exit"
+    - cd /home/web-profile
+    - git pull origin master
+    - npm run build
+    - rm -rf /var/www/html/www.satria.win/*
+    - cp -r build/* /var/www/html/www.satria.win/
+    - systemctl restart apache2
   only:
     - master
