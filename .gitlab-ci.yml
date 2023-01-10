@@ -14,12 +14,22 @@
 #   - mkdir -p ~/.ssh
 #   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
-publish:
-  stage: deploy
+image: ubuntu:latest
+
+stages:
+  - build
+  - deploy
+
+build:
   script:
     - cd /home/web-profile
     - git pull origin master
     - npm run build
+  only:
+    - master
+
+deploy:
+  script:
     - rm -rf /var/www/html/www.satria.win/*
     - cp -r build/* /var/www/html/www.satria.win/
     - systemctl restart apache2
