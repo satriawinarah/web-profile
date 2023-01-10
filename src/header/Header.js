@@ -17,7 +17,7 @@ const Header = () => (
                     <Col></Col>
                 </Row>
                 <Row className={"column-name"}>
-                    <Col>Satria Winarah Test 2</Col>
+                    <Col>Satria Winarah Test 3</Col>
                 </Row>
                 <Row className={"column-profession"}>
                     <Col>Fullstack Engineer</Col>
