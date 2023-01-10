@@ -21,6 +21,7 @@ stages:
   - deploy
 
 build:
+  stage: build
   script:
     - cd /home/web-profile
     - git pull origin master
@@ -29,6 +30,7 @@ build:
     - master
 
 deploy:
+  stage: deploy
   script:
     - rm -rf /var/www/html/www.satria.win/*
     - cp -r build/* /var/www/html/www.satria.win/
