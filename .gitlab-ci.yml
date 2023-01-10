@@ -3,18 +3,25 @@
 # https://docs.gitlab.com/ee/development/cicd/templates.html
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/npm.gitlab-ci.yml
-before_script:
-  - apt-get update -qq
-  - apt-get install -qq git
-  # Setup SSH deploy keys
-  - 'which ssh-agent || ( apt-get install -qq openssh-client )'
-  - eval $(ssh-agent -s)
-  - ssh-add <(echo "$SSH_PRIVATE_KEY")
-  - mkdir -p ~/.ssh
-  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
-deploy:
+# before_script:
+#   - apt-get update -qq
+#   - apt-get install -qq git
+#   # Setup SSH deploy keys
+#   - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+#   - eval $(ssh-agent -s)
+#   - ssh-add <(echo "$SSH_PRIVATE_KEY")
+#   - mkdir -p ~/.ssh
+#   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+publish:
+  stage: deploy
   script:
-    - ssh root@satria.win -p 20212 "cd /home/web-profile && git checkout master && git pull origin master && npm run build && rm -rf /var/www/html/www.satria.win/* && cp -r build/* /var/www/html/www.satria.win/ && systemctl restart apache2 && exit"
+    - cd /home/web-profile
+    - git pull origin master
+    - npm run build
+    - rm -rf /var/www/html/www.satria.win/*
+    - cp -r build/* /var/www/html/www.satria.win/
+    - systemctl restart apache2
   only:
     - master
