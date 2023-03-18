@@ -13,9 +13,7 @@ const AboutMe = () => (
                 <Row>
                     <Col>
                         <p>
-                            I’m Sri Mawwanah Satria Winarah, but my friends call me Satria or 'Array',
-                            maybe because I am a skilled Front-end and Back-end Developer.
-                            Still, I am passionate about Cloud Computing.
+                            Work is about how to live a better life and how to give value to humanity and global civilization.
                         </p>
                     </Col>
                 </Row>
